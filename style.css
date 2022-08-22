@@ -2,7 +2,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
     grid-row: 2fr 1fr 4fr 4fr;
-    gap: 15px;
+    margin: 0px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -64,6 +64,7 @@ button {
     display: flex;
     flex-direction: column;
     margin-top: 20px;
+    margin-left: 15px;
 }
 
 .header .upper {
@@ -123,8 +124,48 @@ button {
 
 .projects {
     grid-column: 2 / 3;
+    background-color: #e1e8f1;
+    padding: 20px;
+    padding-top: 30px;
 }
 
+.projects .title {
+    padding-bottom: 15px;
+    font-weight: bolder;
+    font-size: 23px;
+}
+
+.projects .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 15px;
+    padding: 15px;
+}
+
+.projects .card-container .card {
+    display: flex;
+    background-color: #ffffff;
+}
+
+.projects .card-container .card .content {
+    padding: 20px;
+}
+
+.projects .card-container .card .content .text {
+    padding-bottom: 20px;
+}
+
+.projects .card-container .card .imgs {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 32px;
+}
+
+.projects .card-container .strip {
+    width: 30px; 
+    height: 100%;
+    background-color: #fbb100;
+}
 .announcements {
     grid-column: 3 / 4;
 }
@@ -144,17 +185,6 @@ button {
 }
 .trending .users {
     display: flex;
-}
-.card-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
-    border: 1px black solid;
-    padding: 15px;
-}
-
-.card-container .card {
-    border: 1px black solid;
 }
 
 .announcement-container {
