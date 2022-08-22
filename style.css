@@ -23,7 +23,6 @@ li {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    border: 1px black solid;
     margin: 5px;
 }
 
@@ -64,13 +63,40 @@ button {
     grid-column: 2 / 4;
     display: flex;
     flex-direction: column;
+    margin-top: 20px;
 }
 
 .header .upper {
-    display: flex;
-    gap: 20px;
+    display: grid;
+    gap: 8px;
     padding-bottom: 20px;
-    border: 1px solid black;
+    grid-template-columns: 1fr;
+    grid-auto-flow: column;
+    align-items: center;
+    padding-right: 40px;
+}
+
+.header .upper .searchbar {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-flow: column;
+    gap: 3px;
+    padding-right: 35px;
+    direction: rtl;
+    align-items: center;
+}
+
+.header .upper .bar{
+    border-radius: 15px;
+    background-color: #e1e8f1;
+    border: none;
+    height: 25px;
+}
+
+.header .upper .name{
+    font-weight: bolder;
+    font-size: 20px;
+    padding-left: 15px;
 }
 
 .header .lower{
