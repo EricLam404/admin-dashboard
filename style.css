@@ -1,6 +1,6 @@
 body {
     display: grid;
-    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-columns: 1fr 4fr 2fr;
     grid-row: 2fr 1fr 4fr 4fr;
     margin: 0px;
     font-family: Arial, Helvetica, sans-serif;
@@ -41,7 +41,7 @@ button {
     padding: 10px 0px 10px 30px;
     background-color: #0095da;
     color: #ffffff;
-    font-size: 20px;
+    font-size: clamp(15px, 1rem, 50px);
     font-weight: 800;
     
 }
@@ -124,6 +124,7 @@ button {
 
 .projects {
     grid-column: 2 / 3;
+    grid-row: 2 / 5;
     background-color: #e1e8f1;
     padding: 20px;
     padding-top: 30px;
@@ -168,30 +169,49 @@ button {
 }
 .announcements {
     grid-column: 3 / 4;
+    background-color: #e1e8f1;
+    padding: 20px;
+    padding-top: 30px;
+}
+
+.announcements .title {
+    padding-bottom: 7px;
+    font-weight: bold;
+    font-size: 19px;
+}
+
+.announcements>.title {
+    padding-bottom: 15px;
+    font-weight: bolder;
+    font-size: 23px;
 }
 
 .announcement-container {
     display: flex;
     flex-direction: column;
+}
+
+.announcement-container {
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    gap: 15px;
+}
+
+hr {
+    width: 100%;
+}
+.announcement-container .pages {
 }
 
 .trending {
     grid-column: 3 / 4;
 }
 
-.user-container {
+.trending .user-container {
     display: flex;
     flex-direction: column;
 }
 .trending .users {
     display: flex;
-}
-
-.announcement-container {
-    border: 1px black solid;
-    padding: 15px;
-}
-
-.announcement-container .pages {
-    border: 1px black solid;
 }
